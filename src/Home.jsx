@@ -6,7 +6,7 @@ import TopPlatform from "./TopPlatform";
 
 function Home() {
   return (
-    <div className="pt-[100px] pl-[80px] grid grid-cols-[1fr_auto] grid-rows-[auto_auto] gap-5">
+    <div className="pt-[120px] flex flex-col lg:grid lg:grid-cols-[0.55fr_0.45fr] gap-3 w-full pl-[70px] px-4 py-5 ">
       <SalesTrend />
       <DisplayBox />
       <LastOrders />

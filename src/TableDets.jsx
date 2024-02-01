@@ -3,7 +3,7 @@ function TableDets({ name, date, amount, status, image }) {
   return (
     <tr className="border-t  border-[#EDF2F6]  ">
       <td className="flex items-center gap-1 text-[#3A3F51] font-medium">
-        <img src={`/images/${image}`} alt="" />
+        <img className="hidden" src={`/images/${image}`} alt="" />
         <p>{name}</p>
       </td>
       <td className="text-[#737373]">{date}</td>

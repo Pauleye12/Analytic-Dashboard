@@ -46,10 +46,10 @@ function LastOrders() {
         <p className="text-[#26282C] font-semibold text-lg ">Last Orders</p>
         <p className="text-[#34CAA5] font-medium text-lg ">See all</p>
       </div>
-      <div className="w-full">
-        <table className="w-full">
+      <div className="w-full overflow-x-scroll">
+        <table className="w-full ">
           <tr className="text-[#9CA4AB] font-medium text-left  ">
-            <th>Name</th>
+            <th className="">Name</th>
             <th>Date</th>
             <th>Amount</th>
             <th>Status</th>

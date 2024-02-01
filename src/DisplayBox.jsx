@@ -40,7 +40,7 @@ const BoxDets = [
 
 function DisplayBox() {
   return (
-    <div className="grid justify-center w-full grid-cols-[230px_230px] grid-rows-2 gap-4">
+    <div className="items-center gap-5 w-full justify-between grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))]">
       {BoxDets.map((box, index) => {
         return <Box {...box} key={index} />;
       })}
