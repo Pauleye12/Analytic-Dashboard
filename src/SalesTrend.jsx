@@ -53,7 +53,7 @@ function SalesTrend() {
         <div className="flex pb-2 justify-between items-center">
           <h1>Sales Trends</h1>
           <div className="flex items-center gap-2">
-            <p>Short by:</p>
+            <p className="hidden sm:flex">Short by:</p>
             <button
               className="flex items-center gap-1 border rounded-full border-[#E5EAEF] px-3 py-[5px] relative "
               onClick={() => {
@@ -63,7 +63,7 @@ function SalesTrend() {
               <p className="hidden sm:flex">{timeFrame}</p>
               <img src="/images/Arrow - Down 2.png" alt="" />
               {showDropdown && (
-                <ul className="absolute bottom-[-120px] left-[50%] translate-x-[-50%] border px-2 py-2 rounded-lg text-left w-full flex flex-col gap-2 ">
+                <ul className="absolute bottom-[-120px] left-[50%] translate-x-[-50%] border px-2 py-2 rounded-lg text-left lg:w-full w-max flex flex-col gap-2 ">
                   <li onClick={selectTimeFrame}>Monthly</li>
                   <li onClick={selectTimeFrame}>Weekly</li>
                   <li onClick={selectTimeFrame}>Daily</li>

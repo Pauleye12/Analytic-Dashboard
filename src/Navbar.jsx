@@ -24,9 +24,12 @@ function Navbar() {
             <img src="/images/solar_calendar-linear.png" alt="" />
             <h1>November 15, 2024</h1>
           </div>
-          <div className="rounded-full border border-[#DADDDD] p-3 ">
+          <button className=" relative rounded-full border border-[#DADDDD] p-3 ">
             <img src="/images/solar_bell-outline.png" alt="" />
-          </div>
+            <div className="bg-[#f45252] rounded-full py-1 px-2 absolute top-[-7px] right-[-5px] text-white text-xs font-semibold">
+              2
+            </div>
+          </button>
           <div
             className="flex gap-2 relative "
             onMouseOver={() => {
