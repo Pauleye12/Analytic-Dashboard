@@ -1,6 +1,7 @@
-import React from "react";
+import { useState } from "react";
 
 function Navbar() {
+  const [showDropdown, setShowDropdown] = useState(false);
   return (
     <div className=" w-full z-20 fixed top-0 left-0 pl-20  bg-[#FAFAFA] border-b border-[#E5EAEF] py-3  flex flex-col items-start gap-2 px-5">
       <div className="flex justify-between items-center w-full ">
@@ -26,8 +27,16 @@ function Navbar() {
           <div className="rounded-full border border-[#DADDDD] p-3 ">
             <img src="/images/solar_bell-outline.png" alt="" />
           </div>
-          <div className="flex gap-2">
-            <div className="flex items-center gap-2 lg:border border-[#DADDDD] px-2 py-2 rounded-full">
+          <div
+            className="flex gap-2 relative "
+            onMouseOver={() => {
+              setShowDropdown(true);
+            }}
+            onMouseOut={() => {
+              setShowDropdown(false);
+            }}
+          >
+            <div className="flex items-center gap-2 lg:border border-[#DADDDD] px-2 py-2 rounded-full cursor-pointer ">
               <div className="rounded-full">
                 <img src="/images/Rectangle 1061.png" alt="" />
               </div>
@@ -39,6 +48,33 @@ function Navbar() {
                 <img src="/images/Arrow - Down 2.png" alt="" />
               </button>
             </div>
+            {showDropdown && (
+              <div className="absolute bottom-[-120px]  left-[50%] translate-x-[-50%] lg:w-full w-max pt-7">
+                <ul className=" border px-2 py-2 rounded-lg text-left w-full flex flex-col text-[#26282C] gap-2 bg-white ">
+                  <li className="cursor-pointer flex items-center gap-2">
+                    <img
+                      src="/images/Rectangle 1061.png"
+                      alt=""
+                      className="w-5 "
+                    />{" "}
+                    <span>View Profile</span>
+                  </li>
+                  <li className="cursor-pointer flex items-center gap-2">
+                    <img src="/images/Icon.png" alt="logo" className="w-5 " />{" "}
+                    <span>Switch User</span>
+                  </li>
+                  <li className="cursor-pointer text-[red] flex items-center gap-2">
+                    {" "}
+                    <img
+                      src="/images/logout.png"
+                      alt="logo"
+                      className=" w-5 "
+                    />
+                    <span>Sign Out</span>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>
